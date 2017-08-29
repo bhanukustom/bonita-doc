@@ -53,3 +53,4 @@ The PDF file gathering all the markdown content can be generated using the `npm 
 
 To help you contributing to Bonita BPM documentation, we provide a set of [contribution guidelines](CONTRIBUTING.md).
 Thanks for taking time to contribute!
+A
