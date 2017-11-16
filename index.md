@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+# Bonita BPM documentation resources
 
-You can use the [editor on GitHub](https://github.com/bhanukustom/bonita-doc/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This repository contains the new Bonita BPM documentation site content.
+It uses [Markdown](https://help.github.com/categories/writing-on-github/) to create documentation content.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## View content
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Simple view
 
-```markdown
-Syntax highlighted code block
+Using the [Github Markdown Format](https://help.github.com/categories/writing-on-github/) format allows to check the documentation directly on the GitHub repository website.
 
-# Header 1
-## Header 2
-### Header 3
+So a simple way to view documentation content is to browse the `md` folder on GitHub website.
 
-- Bulleted
-- List
+### Advanced view
 
-1. Numbered
-2. List
+A more industrialized process is possible.  
+The project uses JavaScript scripts to manage and deploy content.
+Therefore, you must first install your favorite `node` version to be able to build the project (`nvm` is the best place to start).
 
-**Bold** and _Italic_ and `Code` text
+Then run in the root folder:
 
-[Link](url) and ![Image](src)
-```
+    npm install
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Then run
 
-### Jekyll Themes
+    npm start
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bhanukustom/bonita-doc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+A web server will be launched locally. It converts md files to html (currently without any style).
+A livereload is also set up and allows any change to the `md` files to reload its html version in the browser.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Build project
+
+The project contains several tasks to generate the documentation.
+
+### HTML
+
+Use `npm run build` to have the html files generated to `build/html`.  
+It reads the version to generate from the command line arguments via the `-v` option or if left blank, reading the _varVersion_ attribute from the `scripts/variables.json` file.
+
+### Taxonomy
+
+Once the html has been generated, the `taxonomy.json` file can be generated from the `build/html/taxonomy.html` file.
+Use the `npm run taxonomy` to do so.
+
+### PDF
+
+The PDF file gathering all the markdown content can be generated using the `npm run pdf` command.
+
+
+## Contribute
+
+To help you contributing to Bonita BPM documentation, we provide a set of [contribution guidelines](CONTRIBUTING.md).
+Thanks for taking time to contribute!
+A
