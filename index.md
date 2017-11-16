@@ -1,4 +1,4 @@
-# Bonita BPM documentation resources
+# Bonita BPM documentation resources 
 
 This repository contains the new Bonita BPM documentation site content.
 It uses [Markdown](https://help.github.com/categories/writing-on-github/) to create documentation content.
